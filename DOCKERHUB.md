@@ -2,35 +2,7 @@
 
 > A light-weight and central mutex source for distributed systems.
 
-## Building
-
-### The Binary
-
-```bash
-make
-```
-
-### The Image
-
-```bash
-docker build -t mootex .
-```
-
 ## Execution
-
-### Binary
-
-```bash
-./mootex
-```
-
-### Container
-
-```bash
-docker run -d --rm -p 3000 --name mootex mootex
-```
-
-### Dockerhub
 
 ```bash
 docker pull hedenface/mootex:0.0.0
