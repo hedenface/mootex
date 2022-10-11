@@ -72,25 +72,25 @@ curl -X POST -d '{"key":"MUTEX-NAME"}' http://localhost:3000/lockJSONBody
 #### Query Parameter
 
 ```bash
-curl http://localhost:3000/lock?key=MUTEX-NAME
+curl http://localhost:3000/unlock?key=MUTEX-NAME
 ```
 
 or
 
 ```bash
-curl http://localhost:3000/lockParameter?key=MUTEX-NAME
+curl http://localhost:3000/unlockParameter?key=MUTEX-NAME
 ```
 
 #### Plaintext Payload
 
 ```bash
-curl -X POST -d 'MUTEX-NAME' http://localhost:3000/lockPlaintextBody
+curl -X POST -d 'MUTEX-NAME' http://localhost:3000/unlockPlaintextBody
 ```
 
 #### JSON Payload
 
 ```bash
-curl -X POST -d '{"key":"MUTEX-NAME"}' http://localhost:3000/lockJSONBody
+curl -X POST -d '{"key":"MUTEX-NAME"}' http://localhost:3000/unlockJSONBody
 ```
 
 ### Response
