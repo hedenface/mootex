@@ -11,24 +11,20 @@ var (
 
 func Lock(key string) {
 
-	mapMutex.Lock()
-	defer mapMutex.Unlock()
-
 	if Mutex[key] == nil {
 		Mutex[key] = &sync.Mutex{}
 	}
 
+	mapMutex.Lock()
 	Mutex[key].Lock()
 }
 
 func Unlock(key string) {
-
-	mapMutex.Lock()
-	defer mapMutex.Unlock()
 
 	if Mutex[key] == nil {
 		return
 	}
 
 	Mutex[key].Unlock()
+	mapMutex.Unlock()
 }
